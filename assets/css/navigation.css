@@ -1,0 +1,224 @@
+.menuheader, .menuheader ul {
+margin: 0 0 0 0;
+padding: 0 0 0 0;
+list-style: none!important;
+z-index:99999;
+float:right; /*float or no float for center align*/
+}
+
+
+
+.menuheader {
+width:auto;
+margin:0 0;
+z-index:999999;
+}
+
+.menuheader:before,
+.menuheader:after {
+content: "";
+display: table;
+}
+
+.menuheader:after {
+clear: both;
+}
+
+.menuheader {
+zoom:1;
+}
+
+.menuheader li {
+float: left;
+position: relative;
+list-style: :none!important;
+margin-left:15px;
+}
+
+.menuheader ul li {margin-left:0px;}
+
+.menuheader li:hover {cursor: pointer; /* background-color:#536167; */}
+
+
+.menuheader a {
+float: left;
+line-height:22px;
+padding-right:5px;
+padding-left:5px;
+padding-top:34px;
+padding-bottom:34px;
+margin:0 0;
+text-decoration: none;
+color: #757575;
+font-weight:400;
+font-size:12px;
+text-transform: none;
+border-top:0px solid #2d2e2e;
+border-radius:0px;
+z-index:999999;
+display:inline-block;
+border-left:0px dotted #ededed;
+
+}
+
+.menuheader li a {
+line-height:22px;
+}
+
+.menuheader li a:hover {
+border-bottom:0px solid #e87e70;
+}
+
+
+.menuheader li.current-menu-item a{	
+border-bottom:0px solid #e87e70;
+}
+
+.menuheader ul li.current-menu-item a{	
+border-bottom:0px solid #e87e70;
+color:#f8f8f8;
+}
+
+.menuheader li a:active{	}
+
+*html .menuheader li a:hover { /* IE6 only */
+color: #a1a1a1;
+}
+
+.menuheader ul {
+border:0px solid #eee;
+border-top:0px solid #e87e70;
+padding:0 0;
+margin: 0 0 0 0; /*movement*/
+_margin: 0; /*IE6 only*/
+opacity: 0;
+visibility: hidden;
+position: absolute;
+top: 89px; /*89*/
+left: -8px;
+z-index:999999;
+background-color:#35383a;
+border-radius: 0px;
+margin-top:0px;
+-webkit-transition: all .2s ease-in-out; 
+-moz-transition: all .2s ease-in-out; 
+-o-transition: all .2s ease-in-out; 
+transition: all .2s ease-in-out; 
+text-align:left;
+
+}
+
+.menuheader li:first-child a {border-top:0px solid #e8785e; border-left:0px; }
+.menuheader ul li:first-child a {border-top:0px solid #e8785e; border-left:0px; }
+.menuheader ul ul li:first-child a {border-top:0px solid #ddd;}
+
+.menuheader li:hover > ul {
+opacity: 1;
+visibility: visible;
+margin: 0;
+z-index:99999;
+
+
+}
+
+.menuheader ul ul {
+border:0px solid #eee;
+top: 0px;
+left: 160px;
+margin: 0 0 0 0px;
+border-radius:0px;
+background-color:#35383a;
+z-index:99999;
+
+_margin: 0; /*IE6 only*/
+}
+
+.menuheader ul li {
+float: left;
+display: block;
+border: 0;
+_line-height: 0; /*IE6 only*/
+border-bottom:1px solid rgba(255,255,255,0.10);
+
+}
+
+.menuheader ul li:last-child {   
+-moz-box-shadow: none;
+-webkit-box-shadow: none;
+box-shadow: none;    
+border-bottom:0px;
+}
+
+.menuheader ul a {    
+width: 180px;
+_height: 10px; /*IE6 only*/
+display: block;
+white-space: nowrap;
+float: none;
+text-transform: none;
+text-align:left;
+padding-right:15px!important;
+padding-left:15px!important;
+padding-top:10px!important;
+padding-bottom:10px!important;
+margin:0;
+line-height:20px;
+font-size:12px;
+border-bottom:0px dotted #292929;
+border-left:0px dotted #ededed;
+border-radius:0px;
+}
+
+.menuheader ul a:hover {
+color:#f2f2f2;
+background-color:#3a3d3f;
+border-bottom:0px;
+
+}
+
+.menuheader ul li:last-child > a {
+border-bottom:0px;
+padding-right:15px!important;
+padding-left:15px!important;
+padding-top:10px!important;
+padding-bottom:10px!important;
+}
+
+
+
+.menuheader ul li:first-child > a:after {
+content: '';
+position: absolute;
+left: 20px;
+top: -8px;
+border-left: 8px solid transparent;
+border-right: 8px solid transparent;
+border-bottom: 0px solid;
+border-bottom-color: #333; 
+
+}
+
+.menuheader ul ul li:first-child a:after {
+left: 15px;
+top: 50%;
+margin-top: -14px;
+border-left: 0;	
+border-bottom: 12px solid transparent;
+border-top: 12px solid transparent;
+border-right: 0px solid #444;
+}
+
+.menuheader ul li:first-child a:hover:after {
+border-bottom-color: #333; 
+}
+
+.menuheader ul ul li:first-child a:hover:after {
+border-right-color: #333; 
+border-bottom-color: transparent; 	
+}
+
+.menuheader ul li:last-child > a {
+
+}
+
+.menuheader-trigger {display: none;}
