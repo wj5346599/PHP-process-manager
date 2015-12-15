@@ -10,7 +10,7 @@ PHP任务后台进程管理工具<br/>
 
 #依赖
 
-* 仅使用CodeIgniter2.3 框架驱动,原生PHP实现
+* 仅使用CodeIgniter2.3 框架驱动,前端使用bootstrap嵌套,代码由原生PHP实现
 * 你随时可以迁移到你自己的框架中
 
 
