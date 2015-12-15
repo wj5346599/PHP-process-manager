@@ -24,10 +24,10 @@ PHP任务后台进程管理工具<br/>
  * 邮件：(654734702#qq.com,把#换成@) 
 
 #部分截图
-![png1](http://huiju.pydzm.com/img/g1.png)
+![1](printscreen/g1.png)
 
-![png1](http://huiju.pydzm.com/img/g2.png)
+![1](printscreen/g2.png)
 
-![png1](http://huiju.pydzm.com/img/g3.png)
+![1](printscreen/g3.png)
 
-![png1](http://huiju.pydzm.com/img/g4.png)
+![1](printscreen/g4.png)
