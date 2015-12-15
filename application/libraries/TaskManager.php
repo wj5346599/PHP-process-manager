@@ -6,7 +6,7 @@
  * 1、Timed execution method
  * 2、execute Process
  * 3、checked Process status
- * 4、kill the process by id
+ * 4、kill the process by pid
  */
 class TaskManager
 {
@@ -37,7 +37,8 @@ class TaskManager
     }
 
     /**
-     * execute the process, get the process ID 
+     * execute the process, get the process ID
+     * @return bool or int
      */
     function PsExec($commandJob, $logs = '/dev/null', $isBefore = false)
     {
@@ -60,6 +61,11 @@ class TaskManager
         //before TODO
     }
 
+    /**
+     * check process status
+     * @param int $pid
+     * @return bool
+     */
     function PsExists($pid)
     {
         exec("ps ax | grep $pid 2>&1", $output);
@@ -74,6 +80,11 @@ class TaskManager
         return false;
     }
 
+    /**
+     * kill the process by pid
+     * @param int $pid
+     * @return bool
+     */
     function PsKill($pid)
     {
         exec("kill -9 $pid", $output);

@@ -9,8 +9,7 @@ class taskManger extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        //before checked
-//        $this->_before_check();
+        //$this->_before_check();
         $this->load->library(array('TaskManager'));
         $this->load->model('Tasklist_model');
         $this->task = new TaskManager();
@@ -66,6 +65,11 @@ class taskManger extends CI_Controller
         $this->backjs("删除失败!");
     }
 
+    /**
+     * function to back by js
+     * @param $msg
+     * @param string $local
+     */
     protected function backjs($msg, $local = 'get_lists')
     {
         echo "<script type=text/javascript>";
@@ -150,7 +154,7 @@ class taskManger extends CI_Controller
 
     /**
      * Create log path
-     * @param type $urls url path
+     * @param string $urls
      */
     protected function _createLogs($urls = '/dev/null')
     {
@@ -168,7 +172,7 @@ class taskManger extends CI_Controller
     }
 
     /**
-     * add proecss
+     * add proecss task
      */
     public function add_task()
     {
