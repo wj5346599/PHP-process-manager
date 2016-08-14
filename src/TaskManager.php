@@ -12,13 +12,13 @@ class TaskManager
 {
 
     /**
-     * First, execute the process, get the process ID 
-     * Second, loop for $timeout seconds checking if process is running 
+     * First, execute the process, get the process ID
+     * Second, loop for $timeout seconds checking if process is running
      * If process is still running after timeout, kill the process and return false
-     * @param string $command 
+     * @param string $command
      * @param int $timeout
      * @param int $sleep
-     * @return boolean 
+     * @return boolean
      */
     function PsExecute($command, $timeout = 60, $sleep = 2)
     {
@@ -37,7 +37,7 @@ class TaskManager
     }
 
     /**
-     * execute the process, get the process ID 
+     * execute the process, get the process ID
      */
     function PsExec($commandJob, $logs = '/dev/null', $isBefore = false)
     {
@@ -46,7 +46,7 @@ class TaskManager
         }
         $command = trim($commandJob) . ' > ' . $logs . ' 2>&1 & echo $!';
         exec($command, $op);
-        $pid = (int) $op[0];
+        $pid = (int)$op[0];
         if ($pid != "")
             return $pid;
         return false;
